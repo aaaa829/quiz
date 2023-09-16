@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Problem;
+import model.Counter;
 import quizDAO.ProblemDAO;
 
 @WebServlet("/Play")
@@ -31,18 +32,25 @@ public class Play extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Integer> choices = new ArrayList<Integer>();
-		for(int i=0;i<10;i++) {
-			String parameter = "choices" + i;
+		for(int i=0;i<3;i++) {
+			String parameter = request.getParameter("choices" + i);
 			choices.add(Integer.parseInt(request.getParameter(parameter)));
 		}
 		HttpSession session = request.getSession();
 		List<Problem> list = (List<Problem>)session.getAttribute("problemList");
 		int count = 0;
-		for(int i =0; i<choices.size();i++) {
-			if(choices.get(i)==list.get(i)) {
-				
+		for(int i =0; i< choices.size();i++) {
+			if(choices.get(i)==(list.get(i).getChoices())) {
+				count++;
 			}
 		}
+		Counter r = new Counter();
+		r.setCount(count);
+		
+		request.setAttribute("count", r);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/result.jsp");
+		rd.forward(request, response);
 	
 		
 	}
