@@ -24,13 +24,11 @@
 	<%=list.get(i).getAnswer3() %><input type="radio" name="choices<%=i %>" value="3"><br>
 	<p class="ans" style="display:none">正解は<%=list.get(i).getChoices() %></p> 
 	<button style="display:block">決定</button>
-	<button id="btn" style="display:none">次へ</button>
+	<button id="next" style="display:none">次へ</button>
 	</div>
 	<%} %>
-	<a href="Result"><button>ゲームを終了</button></a>
+	<a href="Result" id="end" style="display:none"><button>ゲームを終了</button></a>
+
 	<script src="content.js"></script>
-	<script>
-	
-	</script>
 </body>
 </html>

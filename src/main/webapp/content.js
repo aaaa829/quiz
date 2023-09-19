@@ -1,16 +1,24 @@
 const cont = document.getElementsByClassName("cont");
-	let count = 0;
-	for (const q of cont) {
-		const btn = q.getElementsByTagName("button")[0];
-		const btn2 = q.getElementsByTagName("button")[1];
-		console.log(btn);
-		btn.addEventListener("click", () => {
-			q.getElementsByClassName("ans")[0].style.display = "block";
-			btn.style.display = "none";
-			btn2.style.display = "block";
-			btn2.addEventListener("click", () => {
-				cont[++count].style = "display:block";
-				btn2.style.display = "none";
-			});
-		});
-	}
+const end = document.getElementById("end");
+let count = 1;
+for (const quiz of cont) {
+	const decision = quiz.getElementsByTagName("button")[0];
+	const next = quiz.getElementsByTagName("button")[1];
+
+
+	decision.addEventListener("click", () => {
+		quiz.getElementsByClassName("ans")[0].style.display = "block";
+		decision.style.display = "none";
+		if (count >= cont.length) {
+			end.style = "display:inline";
+		} else {
+			next.style.display = "block";
+		}
+
+	});
+	next.addEventListener("click", () => {
+		cont[count++].style = "display:block";
+		next.style.display = "none";
+	});
+}
+
