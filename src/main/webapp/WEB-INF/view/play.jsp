@@ -10,7 +10,7 @@
 <title>quizplay</title>
 </head>
 <body>
-
+<form action="Result" method="post">
 	<%for(int i= 0;i < list.size();i++){%>
 	 <% if(i==0){ %>
 	 <div class="cont">
@@ -23,12 +23,12 @@
 	<%=list.get(i).getAnswer2() %><input type="radio" name="choices<%=i %>" value="2"><br>
 	<%=list.get(i).getAnswer3() %><input type="radio" name="choices<%=i %>" value="3"><br>
 	<p class="ans" style="display:none">正解は<%=list.get(i).getChoices() %></p> 
-	<button style="display:block">決定</button>
-	<button id="next" style="display:none">次へ</button>
+	<button type="button" style="display:block">決定</button>
+	<button type="button" style="display:none">次へ</button>
 	</div>
 	<%} %>
-	<a href="Result" id="end" style="display:none"><button>ゲームを終了</button></a>
-
+<button type="submit" id="end" style="display:none" >ゲームを終了</button>
+</form>
 	<script src="content.js"></script>
 </body>
 </html>

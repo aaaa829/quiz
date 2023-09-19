@@ -21,6 +21,12 @@ public class Result extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
 		HttpSession session = request.getSession();
 		List<Problem> list = (List<Problem>) session.getAttribute("problemList");
 		int count = 0;
@@ -39,11 +45,6 @@ public class Result extends HttpServlet {
 
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/result.jsp");
 		rd.forward(request, response);
-
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
 
 	}
 
