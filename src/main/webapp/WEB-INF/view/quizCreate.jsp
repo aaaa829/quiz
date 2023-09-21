@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>クイズクリエイト</h1>
-	<form action="CreateCehck" method="post">
+	<form action="CreateCheck" method="post">
 	<div>
 	問題内容<br>
 	<textarea rows="10" cols="80" name="content" placeholder="ここに問題内容を記入してください" ></textarea>

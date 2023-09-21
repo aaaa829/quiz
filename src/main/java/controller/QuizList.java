@@ -19,7 +19,7 @@ public class QuizList extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ProblemDAO dao = new ProblemDAO();
-		List<Problem> list = dao.randFind();
+		List<Problem> list = dao.findAll();
 		request.setAttribute("problemList", list);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/questionList.jsp");

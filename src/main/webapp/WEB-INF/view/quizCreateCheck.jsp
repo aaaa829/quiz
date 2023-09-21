@@ -10,19 +10,43 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
-	<p>問題内容<br>
-	<%=p.getContent() %></p>
+	<div align="center">
+	<table border="1" table-layout="fixed">
+	<tr><th colspan="6">問題内容</th>
+	</tr>
+	<tr>
+	<td class="td1" colspan="6"><%=p.getContent() %></td>
+	</tr>
+	<tr id="tr1">
+	<th>回答1：</th><td><%=p.getAnswer1() %></td>
+	<th>回答2：</th><td><%=p.getAnswer2() %></td>
+	<th>回答3：</th><td><%=p.getAnswer3() %></td>
+	</tr>
+	<tr><th colspan="2">正解：</th><td colspan="4"><%=p.getChoices() %></td></tr>
+	</table>
 	</div>
-	<div>
-	<p>
-	回答1：<%=p.getAnswer1() %><br>
-	回答2：<%=p.getAnswer2() %><br>
-	回答3：<%=p.getAnswer3() %>
-	</p>
-	</div>
-	<div><p>正解：<%=p.getChoices() %></p></div>
+	<div align="center">
 	<a href="QuizCreate"><button>修正</button></a>
-	<a href="Main"><button>決定</button></a>
+	<a href="CreateCheck"><button>決定</button></a>
+	</div>
+	<style>
+	button{
+		height:2em;
+		width:10em;
+		font-size:20px;
+		font-weight:bold;
+	}
+	table{
+		height:60px;
+	}
+	.td1{
+		height:100px;
+	}
+	#tr1>th{
+		min-width:60px;	
+		nowrap;
+		font-size:15px;
+		}
+	</style>
 </body>
 </html>

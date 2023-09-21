@@ -13,6 +13,8 @@
 	<span class="p1">今回あなたは</span>
 	<span class="ans">${count.count}</span>
 	<span class="p1">問正解しました！</span>
+	<br><a href="index.jsp">戻る</a>
+
 	<style>
 .p1 {
 	font-size: 20px;

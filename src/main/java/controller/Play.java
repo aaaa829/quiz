@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.Problem;
 import model.Counter;
+import model.Problem;
 import quizDAO.ProblemDAO;
 
 @WebServlet("/Play")
@@ -32,7 +32,7 @@ public class Play extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Integer> choices = new ArrayList<Integer>();
-		for(int i=0;i<3;i++) {
+		for(int i=0;i<4;i++) {
 			String parameter = request.getParameter("choices" + i);
 			choices.add(Integer.parseInt(request.getParameter(parameter)));
 		}

@@ -36,7 +36,7 @@ public class QuizCreate extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("create", p);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("quizCreateCheck.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/quizCreateCheck.jsp");
 		rd.forward(request, response);
 		
 	}

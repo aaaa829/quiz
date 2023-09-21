@@ -10,7 +10,7 @@ for (const quiz of cont) {
 		quiz.getElementsByClassName("ans")[0].style.display = "block";
 		decision.style.display = "none";
 		if (count >= cont.length) {
-			end.style = "display:bock";
+			end.style = "display:block";
 		} else {
 			next.style.display = "block";
 		}

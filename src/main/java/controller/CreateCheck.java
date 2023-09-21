@@ -26,6 +26,9 @@ public class CreateCheck extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("UTF-8");
+		
 		String content = request.getParameter("content");
 		String answer1 = request.getParameter("answer1");
 		String answer2 = request.getParameter("answer2");
@@ -37,7 +40,7 @@ public class CreateCheck extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("create", p);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("quizCreateCheck.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/quizCreateCheck.jsp");
 		rd.forward(request, response);
 	}
 
