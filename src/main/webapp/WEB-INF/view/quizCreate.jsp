@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>quizcreate</title>
+<link rel="stylesheet" href="body.css">
 </head>
 <body>
+<div id="all">
 	<h1>クイズクリエイト</h1>
 	<form action="CreateCheck" method="post">
 	<div>
@@ -26,5 +28,6 @@
 	</div>
 	<input type="submit" value="決定">
 	</form>
+	</div>
 </body>
 </html>

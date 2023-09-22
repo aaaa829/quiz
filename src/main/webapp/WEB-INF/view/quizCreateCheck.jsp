@@ -8,9 +8,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="body.css">
 </head>
 <body>
-	<div align="center">
+	<div id="all" align="center">
 	<table border="1" table-layout="fixed">
 	<tr><th colspan="6">問題内容</th>
 	</tr>
