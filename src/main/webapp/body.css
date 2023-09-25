@@ -1,5 +1,38 @@
 @charset "UTF-8";
 
-body{
-	background:#EEF;
-	}
+body {
+	background: #EEF;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	font-family: "Comic Sans MS";
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+}
+
+#all {
+	margin: 0 auto;
+}
+
+button {
+	font-family: "Comic Sans MS";
+	height: 2em;
+	width: 10em;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+table {
+	min-width: 720px;
+}
+h1 {
+	display: inline-block;
+	background: linear-gradient(180deg, #0072b4 0%, #7bc0be 72%, #afebea 100%);
+	background: -webkit-linear-gradient(-90deg, #0072b4 0%, #7bc0be 72%, #afebea 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

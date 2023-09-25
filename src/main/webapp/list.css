@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.ac {
+	display: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.btn {
+	display: block;
+	min-width: 720px;
+
+}

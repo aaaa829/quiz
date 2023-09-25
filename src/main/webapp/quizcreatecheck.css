@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+button {
+	height: 2em;
+	width: 10em;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+table {
+	height: 60px;
+}
+
+.td1 {
+	height: 100px;
+}
+
+#tr1>th {
+	min-width: 60px;
+	font-size: 15px;
+	white-space: nowrap;
+}

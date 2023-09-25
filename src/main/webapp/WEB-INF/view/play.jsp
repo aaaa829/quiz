@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="body.css">
 </head>
 <body>
-<div id="all" align="center">
+<div id="all">
 <form action="Result" method="post">
 	<%for(int i= 0;i < list.size();i++){%>
 	 <% if(i==0){ %>
@@ -40,7 +40,8 @@
 	<%} %>
 <button type="submit" id="end" style="display:none" >ゲームを終了</button>
 </form>
-</div>
 	<script src="content.js"></script>
+</div>
+<footer><a href="Main">メインメニューへ戻る</a></footer>
 </body>
 </html>

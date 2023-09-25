@@ -8,11 +8,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="quizcreatecheck.css">
 <link rel="stylesheet" href="body.css">
 </head>
 <body>
 	<div id="all" align="center">
-	<table border="1" table-layout="fixed">
+	<table	border="1">
 	<tr><th colspan="6">問題内容</th>
 	</tr>
 	<tr>
@@ -23,31 +24,11 @@
 	<th>回答2：</th><td><%=p.getAnswer2() %></td>
 	<th>回答3：</th><td><%=p.getAnswer3() %></td>
 	</tr>
-	<tr><th colspan="2">正解：</th><td colspan="4"><%=p.getChoices() %></td></tr>
+	<tr><th>正解：</th><td colspan="5"><%=p.getChoices() %></td></tr>
 	</table>
-	</div>
-	<div align="center">
 	<a href="QuizCreate"><button>修正</button></a>
 	<a href="CreateCheck"><button>決定</button></a>
 	</div>
-	<style>
-	button{
-		height:2em;
-		width:10em;
-		font-size:20px;
-		font-weight:bold;
-	}
-	table{
-		height:60px;
-	}
-	.td1{
-		height:100px;
-	}
-	#tr1>th{
-		min-width:60px;	
-		nowrap;
-		font-size:15px;
-		}
-	</style>
+		<footer>	<a href="Main">メインメニューへ戻る</a></footer>
 </body>
 </html>

@@ -26,8 +26,10 @@
 	3,<input type="radio" name="choices" value="3">
 	
 	</div>
-	<input type="submit" value="決定">
+	<button type="reset">修正</button>
+	<button type="submit">決定</button>
 	</form>
 	</div>
+		<footer>	<a href="Main">メインメニューへ戻る</a></footer>
 </body>
 </html>

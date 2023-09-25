@@ -8,8 +8,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>questionlist</title>
 <link rel="stylesheet" href="body.css">
+<link rel="stylesheet" href="list.css">
+<title>questionlist</title>
 </head>
 <body>
 	<div id="all" align="center">
@@ -23,8 +24,8 @@
 	<% } %> 
 	<span>]</span>
 	</div>
-	<br>
-	<div align="center">
+	<a href="Main">メインメニューへ戻る</a>
+	<div>
 	<% for(Problem p : list){ %>
 	<% if(count%2 == 1){ %>
 	<table class="table" border="2" id="tb<%=count%>" style="background-color:#FFF">
@@ -40,15 +41,15 @@
 	</td></tr>
 	<tr>
 	<th>正解番号</th>
-	<td><button class="btn" style="display:block">答えを見る</button>
-	<span class="ac" style="display:none"><%=p.getChoices() %></span>
+	<td><button class="btn">答えを見る</button>
+	<span class="ac"><%=p.getChoices() %></span>
 	</td></tr>	
 	</table>
 	<%count++; %>
 	<%} %>
 	</div>
-	<a href="Main">メインメニューへ戻る</a>
 	</div>
+	<footer>	<a href="Main">メインメニューへ戻る</a></footer>
 	<script src="list.js"></script>
 </body>
 </html>
