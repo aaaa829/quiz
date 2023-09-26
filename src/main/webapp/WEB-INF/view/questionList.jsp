@@ -19,6 +19,7 @@
 	<span style="font-size:20px">目次<br></span>
 	<span>[</span>
 	<% for(int i = 1 ; i < list.size()+1;i++){ %>
+	<% if(i%10 ==0){ %><br><%} %>
 	<a style="text-decoration:none" href="#tb<%=i%>">問題<%=i %></a>
 	<% if(i != list.size()){ %><span>/</span><% } %>
 	<% } %> 
